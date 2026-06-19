@@ -42,6 +42,8 @@ metadata:
 > ❌ `kimi-k2.7-code:cloud` — не отвечает.
 >
 > ⚠️ `nemotron-3-ultra:cloud` может не отображаться в `api/tags`, но работает по прямому запросу (проверено).
+>
+> 🔄 **Fallback:** если `nemotron-3-ultra:cloud` недоступен, замените на `nemotron-3-super:cloud` — быстрее (4-36s), но менее глубокий анализ.
 
 ## Требования
 
