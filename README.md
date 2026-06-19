@@ -7,7 +7,7 @@
 ## Возможности
 
 - 🤖 **2 агента** — minimax-m3 (1M ctx, детальные ответы) + qwen3-coder-next (быстрый кодинг)
-- 🏆 **Арбитр Nemotron-3 Ultra** — 550B, глубокая аналитика
+- 🏆 **Арбитр Nemotron-3 Ultra** — NVIDIA, глубокая аналитика
 - ⚡ **~1.5 мин на задачу**
 - 🔄 **Дополняет OpenCode Zen** — minimax-m3 даёт другой diversity
 
@@ -16,7 +16,7 @@
 ### 1. Настройка провайдера
 
 ```bash
-hermes config set custom_providers '[{"name":"ollama-cloud","base_url":"http://localhost:11434","api_key":"","models":{"minimax-m3:cloud":{"context_length":1048576},"nemotron-3-ultra:cloud":{"context_length":1000000},"qwen3-coder-next:cloud":{"context_length":262144}}}]'
+hermes config set custom_providers '[{"name":"ollama-cloud","base_url":"http://localhost:11434","api_key":"","models":{"minimax-m3:cloud":{"context_length":1048576},"nemotron-3-super:cloud":{"context_length":1000000},"qwen3-coder-next:cloud":{"context_length":262144}}}]'
 ```
 
 ### 2. Установка скила
@@ -45,7 +45,7 @@ hermes skills install https://github.com/L-MORIA/ensemble-ollama-cloud/raw/main/
 
 | Роль | Модель | Время | Контекст |
 |------|--------|-------|----------|
-| 🏆 **Арбитр** | `nemotron-3-ultra:cloud` | 55-90s | 1M |
+| 🏆 **Арбитр** | `nemotron-3-super:cloud` | 55-90s | 1M |
 | 🤖 **Агент A** | `minimax-m3:cloud` | 12-37s | 1M |
 | 🤖 **Агент B** | `qwen3-coder-next:cloud` | 3-6s | 262K |
 

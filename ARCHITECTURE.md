@@ -28,8 +28,8 @@
              ▼
 ┌──────────────────────────────────┐
 │     🏆 АРБИТР                    │
-│  nemotron-3-ultra:cloud          │
-│  NVIDIA 550B / 1M ctx / 55-90s   │
+│  nemotron-3-super:cloud          │
+│  NVIDIA NVIDIA / 1M ctx / 55-90s   │
 │  Оценивает по: безопасность >    │
 │  качество > производительность   │
 └────────────┬─────────────────────┘
@@ -57,7 +57,7 @@
 |--------|--------|-----------------|
 | `minimax-m3:cloud` | ~1M ctx | Детальные ответы, 4+ варианта |
 | `qwen3-coder-next:cloud` | 262K ctx | Быстрый чёткий код |
-| `nemotron-3-ultra:cloud` | 550B / 1M ctx | Анализ и арбитраж |
+| `nemotron-3-super:cloud` | NVIDIA / 1M ctx | Анализ и арбитраж |
 
 ### 3. Hermes Custom Provider
 Провайдер `ollama-cloud` в Hermes config.yaml связывает Hermes с Ollama API.
@@ -70,7 +70,7 @@ custom_providers:
     models:
       minimax-m3:cloud:
         context_length: 1048576
-      nemotron-3-ultra:cloud:
+      nemotron-3-super:cloud:
         context_length: 1000000
       qwen3-coder-next:cloud:
         context_length: 262144

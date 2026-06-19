@@ -13,7 +13,7 @@
 |----------|----------|
 | Всего запусков агентов | 6 |
 | Всего запусков арбитра | 3 |
-| Моделей протестировано | 3 (minimax-m3, qwen3-coder-next, nemotron-3-ultra) |
+| Моделей протестировано | 3 (minimax-m3, qwen3-coder-next, nemotron-3-super) |
 | Общее время тестирования | ~30 мин |
 | Сравнение с | llm-ensemble (OpenCode Zen) |
 
@@ -29,7 +29,7 @@
 ### qwen3-coder-next — 3s ✅
 Один вариант: isalnum + reverse. Чистый код на английском.
 
-### Арбитр (nemotron-3-ultra) — 77s
+### Арбитр (nemotron-3-super) — 77s
 Выбрал qwen3-coder-next: «Правильность одинаковая, читаемость — победа B».
 
 ### Сравнение с OpenCode Zen
@@ -52,7 +52,7 @@
 ### qwen3-coder-next — 5s ✅
 Чёткая архитектура: Tag, Post, TaggedItem (M2M), services.py с CRUD, utils.py.
 
-### Арбитр (nemotron-3-ultra) — timeout ❌
+### Арбитр (nemotron-3-super) — timeout ❌
 Не ответил (пустой ответ). Нестабильность бесплатного tier.
 
 ### Сравнение с OpenCode Zen
@@ -75,7 +75,7 @@
 ### qwen3-coder-next — 6s ✅
 4 модуля: cli.py, converter.py, themes/, config.py. Лаконично.
 
-### Арбитр (nemotron-3-ultra) — 56s ✅
+### Арбитр (nemotron-3-super) — 56s ✅
 Выбрал B (qwen3-coder-next): «Лучше читаемость и архитектура».
 
 ### Сравнение с OpenCode Zen
@@ -110,11 +110,11 @@
 
 **Вердикт:** надёжный выбор для быстрых задач.
 
-### nemotron-3-ultra:cloud
+### nemotron-3-super:cloud
 
 | Плюсы | Минусы |
 |-------|--------|
-| Глубокий анализ (550B) | Медленный (55-90s) |
+| Глубокий анализ (NVIDIA) | Медленный (55-90s) |
 | Хорошо аргументирует выбор | Иногда timeout |
 | Синтезирует гибриды | |
 
