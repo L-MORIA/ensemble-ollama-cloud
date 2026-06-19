@@ -109,10 +109,12 @@ curl -s -X POST http://localhost:11434/api/generate \
 ## Common Pitfalls
 
 1. **Забыть `:cloud`** — без суффикса модель не найдётся
-2. **Ollama Desktop не запущен** — сервер на 11434 не ответит
-3. **minimax-m3 уходит в оффтопик** — используй английские промпты
-4. **Rate limit** — при параллельном запуске 429 Too Many Requests
-5. **Не для простых задач** — ensemble не оправдан
+2. **Не проверять перед утверждением** — всегда тестировать модель через API, прежде чем писать, что она работает (проверено на ошибке с Ollama cloud)
+3. **Ollama Desktop не запущен** — сервер на 11434 не ответит
+4. **minimax-m3 уходит в оффтопик** — используй английские промпты
+5. **Rate limit** — при параллельном запуске 429 Too Many Requests
+6. **Nemotron-3 Ultra иногда timeout** — повторить запрос
+7. **Не для простых задач** — ensemble не оправдан
 
 ## Verification Checklist
 
@@ -121,3 +123,7 @@ curl -s -X POST http://localhost:11434/api/generate \
 - [ ] `curl -X POST ... minimax-m3:cloud` — модель отвечает
 - [ ] `curl -X POST ... qwen3-coder-next:cloud` — модель отвечает
 - [ ] `hermes model` → Ollama Cloud в списке провайдеров
+
+## Reference
+
+- `references/ollama-cloud-quirks.md` — полный справочник по API, rate limits, диагностике
